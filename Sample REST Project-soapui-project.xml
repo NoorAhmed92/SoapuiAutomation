@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Sample REST Project" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" id="ec074468-974d-465f-9b4a-4cf6ddc5ee4c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" wadlVersion="http://research.sun.com/wadl/2006/10" name="Account creation" type="rest" basePath="/" definitionUrl="WSDL-WADL/sample-service.wadl" id="e75ad5a3-d30f-4264-aed3-93e28e782a2f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT"/><con:endpoints>
+      <con:endpoint>http://localhost:8080</con:endpoint>
+    </con:endpoints>
+    <con:resource name="accountcreation" path="accountcreation" id="aa526828-a8e9-430c-882e-8beb70bd977a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Register a new account - viewAccountRegistration" method="GET" id="37934b21-3a75-4a5a-94a0-4c10a19f4843">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>text/html</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Registration Form" mediaType="application/json" id="d2226417-fdb0-4bfc-871a-7a615637c111">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/accountcreation</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Register a new account - createUserAccount" method="POST" id="b185265a-3974-45f5-869e-260d31257c54">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>username</con:name>
+            <con:value xsi:nil="true"/>
+            <con:style>QUERY</con:style>
+            <con:default xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>password</con:name>
+            <con:value xsi:nil="true"/>
+            <con:style>QUERY</con:style>
+            <con:default xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST" id="">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:representation type="RESPONSE" id="">
+          <con:mediaType>text/html</con:mediaType>
+          <con:params/>
+          <con:element xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:representation>
+        <con:request name="Submit Registration Form" mediaType="application/json" postQueryString="false" id="dff9710c-dd7e-4a54-93a2-67efffd4a789">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/accountcreation</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="username" value="john"/>
+            <con:entry key="password" value="w0j39av0d8s"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="0c39c344-d404-46b1-a264-8cafa5bbd93b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://reqres.in</con:endpoint><con:endpoint>https://reqres.in</con:endpoint></con:endpoints><con:resource name="Users" path="/users" id="824bab54-82b8-45d7-8199-26dcc62fe3da"><con:settings/><con:parameters/><con:method name="Users 1" id="05ab3629-92fd-40f7-a365-bb56c1fc2cc8" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:user="https://reqres.in/users">user:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="2fd7a395-20c5-459f-b72f-5bf6c8744280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api</con:endpoint><con:request>{
+    "name": "morpheus",
+    "job": "leader"
+}</con:request><con:originalUri>https://reqres.in/users</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="api" path="/api/register" id="b87cbf85-15ab-40e4-9270-ed1d81328bca"><con:settings/><con:parameters/><con:method name="Method 1" id="d2c0b0ff-bb93-4f76-b35f-e602b2a2340c" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:reg="https://reqres.in/api/register">reg:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>407</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="711a816a-1bd0-40d0-9a75-a01e72b50cf1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request>{
+    "email": "sydney@fife",
+    "password": "pistol"
+}</con:request><con:originalUri>https://reqres.in/api/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:testSuite name="Test account creation" id="a654d9be-1be4-48ae-a8c4-6faa190bd2e0">
+    <con:description>TestSuite generated for REST Service [Sample REST project (5.0)]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="accountcreation TestCase" searchProperties="true" id="3923f7a8-171b-45cc-9b5d-a50bfa715f0a">
+      <con:description>TestCase generated for REST Resource [accountcreation] located at [/accountcreation]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="View Form" id="b03c0ef3-e71a-452e-ab66-6f6439f58edc">
+        <con:settings/>
+        <con:config service="Account creation" resourcePath="/accountcreation" methodName="Register a new account - viewAccountRegistration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="View Form" mediaType="application/json" id="c22e7dfa-8fb5-4b78-ad9b-c520adacd089">
+            <con:settings/>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Submit Account Details" id="f7df4175-9670-4816-bcc9-e1a910128ced">
+        <con:settings/>
+        <con:config service="Account creation" resourcePath="/accountcreation" methodName="Register a new account - createUserAccount" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Submit Account Details" mediaType="application/json" postQueryString="false" id="1bdb4b47-60f2-4c12-95f4-8e3af9c5be5e">
+            <con:settings/>
+            <con:endpoint>http://localhost:8080</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    <con:reportParameters/></con:testCase>
+    <con:properties/>
+  <con:reportParameters/></con:testSuite>
+  <con:testSuite id="81e3252d-f3d0-4a64-8e48-db921072aecf" name="DEMO"><con:description>TestSuite generated for REST Service [https://reqres.in]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="13901da8-fa0a-4f2d-af4d-8b2a9e5c72ac" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Users TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [Users] located at [/users]</con:description><con:settings/><con:testStep type="properties" name="Properties" id="c6542ad2-9b41-429e-908f-da3873acb7da"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>name</con:name><con:value>prabhas</con:value></con:property><con:property><con:name>job</con:name><con:value>actor</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Data Reader" id="d20a5a08-1cb3-4fb0-8a98-c1784af1a61b"><con:settings/><con:config><script>import jxl.*
+Workbook wc= Workbook.getWorkbook(new File("C:\\Users\\NoorAhmed\\Documents\\Soapui\\DemoSheet.xls"))
+Sheet sc= wc.getSheet("Sheet1")
+def rows=sc.getRows()
+def cols=sc.getColumns()
+log.info "number of rows" + rows
+log.info "number of columns" + cols
+
+for(i=1;i&lt;rows;i++)
+{
+	
+		
+		def porp= testRunner.testCase.testSteps["Properties"]
+		Cell cell= sc.getCell(0,i)
+		Cell cell1= sc.getCell(1,i)
+		String s1=cell.getContents()
+		String s2=cell1.getContents()
+		
+		porp.setPropertyValue("name",s1)
+		porp.setPropertyValue("job",s2)	
+	log.info s1
+	log.info s2
+	
+	}</script></con:config></con:testStep><con:testStep type="restrequest" name="Request 1" id="d02c4e4b-b246-44a2-a902-2a11b182d05b"><con:settings/><con:config service="https://reqres.in" resourcePath="/users" methodName="Users 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="2fd7a395-20c5-459f-b72f-5bf6c8744280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api</con:endpoint><con:request>{
+    "name": "${Properties#name}",
+    "job": "${Properties#job}"
+}</con:request><con:originalUri>https://reqres.in/users</con:originalUri><con:assertion type="Response SLA Assertion" id="2e0a0a22-0805-47a1-bb03-bcfc00981a99" name="Response SLA"><con:configuration><SLA>10000</SLA></con:configuration></con:assertion><con:assertion type="Simple Contains" id="17732679-fdf6-4179-8813-f906c4badb6c" name="Contains"><con:configuration><token>name</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="ff5fafc3-d108-4276-ab53-adf6f5d87024" name="Not Contains"><con:configuration><token>error</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="ad9b1977-30bb-4d23-9a4f-a66281120f53" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="37d31c3a-df6a-476f-b229-100f9a469aae" name="Invalid HTTP Status Codes"><con:configuration><codes>400,401</codes></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="9230c0d0-55d7-4f12-8010-3ff52539c3bd" name="JsonPath Count"><con:configuration><path>$['name']</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="105bf641-9a78-49d9-b560-e889ad76e0dc" name="JsonPath Match"><con:configuration><path>$['job']</path><content>actor</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Logs" id="8f7cb57e-663e-4fb9-af0e-be2a1a53f565"><con:settings/><con:config><script>def soapuiRequests = testRunner.testCase.getTestStepsOfType(com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStep )
+def fileName = "demo logs"
+def rawRequest= new File("C:\\Users\\NoorAhmed\\Documents\\Soapui\\Logs\\"+ "Request_" + fileName+".txt")
+
+def inputFileResponse = new File("C:\\Users\\NoorAhmed\\Documents\\Soapui\\Logs\\"+ "Response_" + fileName+".txt")
+inputFileResponse.write(context.testCase.getTestStepByName("Request 1").getProperty("response").value)
+rawRequest.write(context.testCase.getTestStepByName("Request 1").getProperty("rawrequest").value)
+</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="703774ef-cf99-4d79-bfe3-ad4178d788bc"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>name</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Request 1</con:sourceStep><con:sourcePath>$['name']</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Copy of Request 1</con:targetStep><con:targetPath>$['name']</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>job</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Request 1</con:sourceStep><con:sourcePath>$['job']</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Copy of Request 1</con:targetStep><con:targetPath>$['job']</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Copy of Request 1" id="29ff8cd7-0eb6-4a9f-b76b-b85f49c48d15"><con:settings/><con:config service="https://reqres.in" resourcePath="/users" methodName="Users 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of Request 1" id="2fd7a395-20c5-459f-b72f-5bf6c8744280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api</con:endpoint><con:request>{
+   "name": "prabhas",
+   "job": "actor"
+}</con:request><con:originalUri>https://reqres.in/users</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="96e33cb5-4f8d-4aac-a44e-ff4a4f0f5ea4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="api TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [api] located at [/api/register]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="4e0aba35-ea56-480c-a181-8d52ec69713d"><con:settings/><con:config service="https://reqres.in" resourcePath="/api/register" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="711a816a-1bd0-40d0-9a75-a01e72b50cf1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request>{
+    "email": "sydney@fife",
+    "password": "pistol"
+}</con:request><con:originalUri>https://reqres.in/api/register</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
+  <con:testSuite id="851f7093-ebcd-44ef-8e00-493d99d8df66" name="Demo Test Suite">
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">true</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    
+    <con:testCase id="06f51246-2da7-46c0-8cd5-cb58a60fca1c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="second" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      
+      <con:testStep type="properties" name="Properties" id="c82f6aa3-147b-4716-aae4-497c4691e347">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            
+          <con:property><con:name>A</con:name><con:value>30</con:value></con:property><con:property><con:name>B</con:name><con:value>40</con:value></con:property></con:properties>
+        </con:config>
+      </con:testStep>
+      
+      <con:testStep type="groovy" name="Groovy Script" id="a0ffc61c-b1ba-48c0-bc76-f5c0b2637ad6">
+        <con:settings/>
+        <con:config><script>import jxl.*
+Workbook wc= Workbook.getWorkbook(new File("C:\\Users\\User\\Desktop\\Demo.xls"))
+Sheet sc= wc.getSheet("Sheet1")
+def rows=sc.getRows()
+def cols=sc.getColumns()
+log.info "number of rows" + rows
+log.info "number of columns" + cols
+
+for(i=1;i&lt;rows;i++)
+{
+	
+		//
+		def porp= testRunner.testCase.testSteps["Properties"]
+		Cell cell= sc.getCell(0,i)
+		Cell cell1= sc.getCell(1,i)
+		String s1=cell.getContents()
+		String s2=cell1.getContents()
+		
+		porp.setPropertyValue("A",s1)
+		porp.setPropertyValue("B",s2)	
+	log.info s1
+	log.info s2
+	
+	}</script></con:config>
+      </con:testStep>
+      
+      <con:testStep type="restrequest" name="Request 1" id="65f05f04-2a71-45a3-8429-b7b9307b5220">
+        <con:settings/>
+        <con:config service="Account creation" resourcePath="/accountcreation" methodName="Register a new account - viewAccountRegistration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="a7caf3ef-5155-4628-8ed8-75fe87d86237" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.209.22.34:8088</con:endpoint>
+            <con:request>{
+	"Add":{
+		"intA": "${Properties#A}",
+		"intB":"${Properties#B}"
+	}
+}</con:request>
+            <con:originalUri>http://10.209.22.34/calculator/Add</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="de7925fa-53e9-460c-a257-b4ab3a6b1f65" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/><con:parameters><entry key="header" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+          <con:parameterOrder><con:entry>header</con:entry></con:parameterOrder></con:restRequest>
+        </con:config>
+      </con:testStep>
+      
+      
+      
+      <con:testStep type="transfer" name="Property Transfer" id="5edfd0b4-181f-4b26-bf34-e515d8a93774"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>result</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Request 1</con:sourceStep><con:sourcePath>$['AddResponse']['AddResult']</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Copy of Request 1</con:targetStep><con:targetPath>$['Add']['intB']</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Copy of Request 1" id="e2f9a7fb-77f3-42f5-9bbe-5694ad1b89b8">
+        <con:settings/>
+        <con:config service="Account creation" resourcePath="/accountcreation" methodName="Register a new account - viewAccountRegistration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Copy of Request 1" id="a7caf3ef-5155-4628-8ed8-75fe87d86237" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.209.22.34:8088</con:endpoint>
+            <con:request>{"Add": {
+   "intB": "70",
+   "intA": "70"
+}}</con:request>
+            <con:originalUri>http://10.209.22.34/calculator/Add</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="de7925fa-53e9-460c-a257-b4ab3a6b1f65" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/><con:parameters><entry key="header" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+          <con:parameterOrder><con:entry>header</con:entry></con:parameterOrder></con:restRequest>
+        </con:config>
+      </con:testStep><con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>b867a199-aba8-4bc1-a31d-df965d2a5925</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a537773c-1c01-470d-bd38-2a88b0471051</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3fb960ab-9f0c-41f0-822d-52951a4d7ec8</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>12aaa311-2d89-44c5-9538-b7a1bb52b92f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>7cc57b94-9e61-42d9-8e41-3f8d59fbed29</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>0b2bbd8b-81c1-4621-9deb-e08f64f1f8e2</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    
+    <con:properties>
+      
+      
+    <con:property><con:name>A</con:name><con:value/></con:property><con:property><con:name>B</con:name><con:value/></con:property></con:properties>
+    <con:reportParameters/>
+  </con:testSuite><con:requirements/><con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/><con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/>
+</con:soapui-project>
